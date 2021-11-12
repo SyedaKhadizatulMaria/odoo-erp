@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="bjit_erp_test.list">
+      <field name="name">bjit_erp_test list</field>
+      <field name="model">bjit_erp_test.bjit_erp_test</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="bjit_erp_test.action_window">
+      <field name="name">bjit_erp_test window</field>
+      <field name="res_model">bjit_erp_test.bjit_erp_test</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="bjit_erp_test.action_server">
+      <field name="name">bjit_erp_test server</field>
+      <field name="model_id" ref="model_bjit_erp_test_bjit_erp_test"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="bjit_erp_test" id="bjit_erp_test.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="bjit_erp_test.menu_1" parent="bjit_erp_test.menu_root"/>
+    <menuitem name="Menu 2" id="bjit_erp_test.menu_2" parent="bjit_erp_test.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="bjit_erp_test.menu_1_list" parent="bjit_erp_test.menu_1"
+              action="bjit_erp_test.action_window"/>
+    <menuitem name="Server to list" id="bjit_erp_test" parent="bjit_erp_test.menu_2"
+              action="bjit_erp_test.action_server"/>
+-->
+  </data>
+</odoo>

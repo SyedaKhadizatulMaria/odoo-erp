@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id='bjit_employee_inherit' model='ir.ui.view'>
+        <field name='name'>bjit.employee.inherit</field>
+        <field name='model'>hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name='arch' type='xml'>
+            <xpath expr="//notebook/page[3]" position="after">
+                <page string="Language Skill">
+                    <field name="employee_language_line">
+                        <tree nolabel="1" widget="many2many">
+                            <field name="employee_language"/>
+                        </tree>
+                        <form>
+                            <group>
+                                <field name="employee_language"/>
+                                <field name="language_history_line">
+                                    <tree string="Language History" editable="bottom" nolabel="1" widget="many2many">
+                                        <field name="language_type"/>
+                                        <field name="grade_level"/>
+                                    </tree>
+                                    <form>
+                                        <group>
+                                            <field name="language_type"/>
+                                            <field name="grade_level"/>
+                                        </group>
+                                    </form>
+                                </field>
+                            </group>
+                        </form>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
